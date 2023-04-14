@@ -1,0 +1,92 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* outline: 2px solid red; */
+}
+span{
+    font-size: 70% !important;
+}
+
+div.at-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+.at-item {
+    color: black; font-weight:bold; font-size:1em;
+    
+    animation-name: focus-in-zoomout;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: none;
+        
+    /* shorthand
+    animation: focus-in-zoomout 1s linear 0s 1 normal none;*/
+}
+@keyframes focus-in-zoomout {
+        
+    0% {
+        letter-spacing:1em;
+        transform:translateY(300px);
+        filter:blur(12px);
+        opacity:0;
+    }
+    100% {
+        transform:translateY(0px);
+        filter:blur(0);
+        opacity:1;
+    }
+}
+
+/* FIRST CAROUSEL */
+
+#firstCarousel{
+    height: 100%;
+    width: 100%;
+}
+
+.besideFirstC{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+/* SERVICES */
+#travel{
+    font-size: 15px !important;
+}
+#travel:hover{
+color:skyblue;
+font-weight: bold;
+}
+
+#food{
+    font-size: 15px !important;
+}
+#food:hover{
+    color: greenyellow;
+}
+
+#pay{
+    font-size: 15px !important;
+}
+#pay:hover{
+    color: yellow;
+}
+
+/* SPONSORED PRODUCTS */
+
+#sponsored:hover{
+    box-shadow: 0 0 10px;  
+}
+
+li{
+    list-style-type: none;
+    font-size: x-small
+}
+
+
+

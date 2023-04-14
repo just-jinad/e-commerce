@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="firstPageRes.css">
+  <link rel="stylesheet" href="firstPage.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <title>
+    Show Items
+  </title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+
+</head>
+
+<body>
+  <img class="w-100"
+    src="https://www-konga-com-res.cloudinary.com/image/upload/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/v1677277813/contentservice/web.gif_rk6Och8Ai.gif"
+    alt="">
+
+  <!-- As a heading -->
+  <img class="w-100"
+    src="https://www-konga-com-res.cloudinary.com/image/upload/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/v1678100539/contentservice/webaccess.gif_ryzHOr71h.gif"
+    alt="">
+  <div class="text">
+    <span id="cartAdd" class="text-center text-white position-absolute end-0 mx-4 my-3  rounded-circle bg-danger "
+      style="
+        margin-right: 65px; width: 28px; height: 28px;" id="box"></span>
+    <span class="text">This is a clicked items</span>
+    <div class="text d-flex w-100 " id="clicked">
+
+      <div class="container-fluid">
+        <img src="" alt="" id="img" class="text w-100" style="height: 90%; width: 100%  !important;">
+      </div>
+      <div class="container-fluid">
+        <p class="text" id="clickeddes"></p>
+        <p class="text" id="clickedProductCode"></p>
+        <p class="tex t" id="clickedBrand"></p>
+        <hr>
+        <p class="text" id="clickedpri"></p>
+
+        <!-- <button class=" btn btn-warning"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+            fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+            <path
+              d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+          </svg></button><input type="number" placeholder="1" class="" id="showNum"><button class="btn btn-success"><svg
+            xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-minus"
+            viewBox="0 0 16 16">
+            <path d="M5.5 8a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1H6a.5.5 0 0 1-.5-.5z" />
+            <path
+              d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z" />
+          </svg></button> <br> -->
+
+
+        <button class="text btn btn-warning px-3 ms-3 text-white fw-bold mt-4 text-center w-75" onclick="addToCart()"
+          id="addtocart">Add to cart +</button><br>
+        </div>
+
+    </div>
+
+  </div><br><br><br>
+
+
+  <nav class="p-3" style="background-color: lavenderblush;">
+    <ul class="nav justify-content-between">
+      <li class="nav-item">
+        <h4>Sponsored Products</h4>
+      </li>
+    </ul>
+  </nav>
+  <div>
+    <div class="row">
+      <div class="col-6 col-md-2 rounded item" id="sponsored">
+        <img style="height: 150px;"
+          src="https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/B/I/203020_1674629573.jpg"
+          alt="">
+        <p class="fw-bold" style="font-size: 13px;">Hybrid Solar Inverter</p>
+        <span class="fw-bold">
+          ₦350,000
+        </span>
+      </div>
+
+      <div class="col-6 col-md-2 rounded item" id="sponsored">
+        <img style="height: 150px;"
+          src="https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/F/N/181197_1653660199.jpg"
+          alt="">
+        <p class="fw-bold" style="font-size: 13px;">Robovic 15c max WiFi connec...</p>
+        <span class="fw-bold">
+          ₦177,000
+        </span>
+      </div>
+
+
+      <div class="col-6 col-md-2 rounded item" id="sponsored">
+        <img style="height: 150px;"
+          src="https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/2/H/2HP-Treadmill-with-Massager-6177254_4.jpg"
+          alt="">
+        <p class="fw-bold" style="font-size: 13px;">2HP Treadmill with Massager</p>
+        <span class="fw-bold">
+          ₦337,000
+        </span><span style="text-decoration: line-through;"> ₦356,000</span><br>
+        <span style="color:green;">You save ₦19,000</span>
+
+      </div>
+
+
+      <div class="col-6 col-md-2 rounded item" id="sponsored">
+        <img style="height: 150px;"
+          src="https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/W/Z/63108_1611150401.jpg"
+          alt="">
+        <p class="fw-bold" style="font-size: 13px;">Out door Table Tennis Board</p>
+        <span class="fw-bold">
+          ₦220,200
+        </span><span style="text-decoration: line-through;"> ₦240,000</span><br>
+        <span style="color:green;">You save ₦20,000</span>
+      </div>
+
+      <div class="col-6 col-md-2 mt-3 rounded item" id="sponsored">
+        <img style="height: 150px;"
+          src="https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/B/D/194770_1649242684.jpg"
+          alt="">
+        <p class="fw-bold" style="font-size: 13px;">Tecno Spark 8c - 6.6" -64GB <br>ROM...</p>
+        <hr>
+        <span class="fw-bold">
+          ₦72,500</span><br>
+        <span>Sold by Stunner NG</span>
+
+      </div>
+
+
+      <div class="col-6 col-md-2 rounded item" id="sponsored">
+        <img style="height: 150px;"
+          src="https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/U/Q/192711_1651671034.jpg"
+          alt="">
+        <p class="fw-bold" style="font-size: 13px;">Waterproof Business Laptop Bag</p>
+        <span class="fw-bold">
+          ₦8,500
+        </span><span style="text-decoration: line-through;"> ₦15,000</span><br>
+        <span style="color: green;">You save ₦500</span>
+      </div>
+    </div>
+  </div>
+  </section>
+
+  <!-- OUR PRODUCTS -->
+
+  <section class="container-fluid mt-4">
+    <nav class="p-3" style="background-color: rgba(240, 176, 240, 0.726);">
+      <ul class="nav justify-content-between">
+        <li class="nav-item">
+          <h4 class="text-white">Our Products</h4>
+        </li>
+      </ul>
+    </nav>
+
+    <div>
+      <div class="row">
+        <div class="col-6 col-md-2 rounded item mt-4" id="sponsored">
+          <img class="mt-3" style="height: 150px;"
+            src="https://i.pinimg.com/564x/38/c1/7b/38c17b657fc52cd82c67da0dc15dfa5c.jpg" alt="">
+          <p class="fw-bold" style="font-size: 13px;">SamSung galaxy Z flip 3</p>
+          <span class="fw-bold">
+            ₦25,000
+          </span>
+        </div>
+
+
+        <div class="col-6 col-md-2 rounded item mt-4" id="sponsored">
+          <img class="mt-3" style="height: 150px;"
+            src="https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/F/Q/118566_1648211647.jpg"
+            alt="">
+          <p class="fw-bold" style="font-size: 13px;">Oppo A96 - 6.95" -8gb + 256 Gb..</p>
+          <span class="fw-bold">
+            ₦186,999
+          </span><span class="float-end" style="text-decoration: line-through;">₦205,699</span><br>
+          <span>sold by Tphones</span>
+
+        </div>
+
+
+        <div class="col-6 col-md-2 rounded item mt-4" id="sponsored">
+          <img class="mt-3" style="height: 150px;"
+            src="https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/E/V/_1665999934.jpg"
+            alt="">
+          <p class="fw-bold" style="font-size: 13px;">Tecno Spark 8p 64+4-bulk Td</p>
+          <span class="fw-bold">
+            ₦79,400
+          </span><span class="float-end" style="text-decoration: line-through;">₦87,340</span><br>
+          <span>sold by Tphones</span>
+        </div>
+
+
+        <div class="col-6 col-md-2 mt-3 rounded item" id="sponsored">
+          <img style="height: 150px;"
+            src="https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/S/V/3553_1649344075.jpg"
+            alt="">
+          <p class="fw-bold" style="font-size: 13px;">Samsung Galaxy A33 5g - 6.4" <br>Sup...</p>
+          <hr>
+          <span class="fw-bold">
+            ₦245,000</span><br>
+          <span>Sold by Ojays</span>
+
+        </div>
+
+        <div class="col-6 col-md-2 mt-3 rounded item" id="sponsored">
+          <img style="height: 150px;"
+            src="https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/N/E/67343_1648189923.jpg"
+            alt="">
+          <p class="fw-bold" style="font-size: 13px;">Xiaomi 12 Po 5G - 6.73" LTPO <br>AMO...</BR></p>
+          <hr>
+          <span class="fw-bold">
+            ₦630,000</span><br>
+          <span>Sold by wholesales phones</span>
+
+        </div>
+
+        <div class="col-6 col-md-2 mt-3 rounded item" id="sponsored">
+          <img style="height: 150px;"
+            src="https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/X/M/141488_1616730429.jpg"
+            alt="">
+          <p class="fw-bold" style="font-size: 13px;">Samsung Galaxy Note 10 - 6.3" <br>-...</p>
+          <hr>
+          <span class="fw-bold">
+            ₦220,000</span><span style="text-decoration: line-through;"> ₦90,000</span><br>
+          <span>Sold by Sylva Communications</span>
+          <button class="btn btn-info">add to cart</button><br><br>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="lgFooter bg-dark text-light mt-4" style="color: rgb(241, 244, 247) !important;">
+    <nav style="font-size: 13px; background-color: rgb(56, 54, 54);" class="p-3 ps-4 ">
+      <ul class="nav justify-content-between align-items-center">
+        <li class="nav-item">
+          <div class="d-flex"><i class="bi bi-envelope fs-2"></i>
+            <span class="ms-1">
+              <h6 style="font-size: small;">EMAIL</h6>
+              <p>Tphones@gmail.com</p>
+          </div>
+        </li>
+
+
+
+        <li class="nav-item">
+          <div class="d-flex"><i class="bi bi-telephone fs-2"></i>
+            <span class="ms-1">
+              <h6 style="font-size: small;">PHONE SUPPORT</h6>
+              <p>09063219493</p>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <div class="d-flex"><i class="bi bi-whatsapp fs-2"></i>
+            <span class="ms-1">
+              <h6 style="font-size: small;">WHATSAPP</h6>
+              <p>09063219493</p>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <div class="d-flex"><i class="bi bi-twitter fs-2"></i>
+            <span class="ms-1">
+              <h6 style="font-size: small;">TWITTER</h6>
+              <p>@just_jinad</p>
+          </div>
+        </li>
+
+        <li class="nav-item d-flex ">
+          <input type="email" placeholder="Email Address" class="rounde">
+          <button class="btn btn-outline-warning fw-bold">Subscribe</button>
+        </li>
+      </ul>
+    </nav>
+    <section class="d-none d-md-block">
+      <nav class="d-flex justify-content-between">
+        <ul>
+          <h6 class="text-warning"> ABOUT US </h6>
+          <li>Contact us</li>
+          <li>About Us</li>
+          <li>Careers</li>
+          <li>Our Blog</li>
+          <li>Careers</li>
+          <li>Forum</li>
+          <li>Terms and Condition</li>
+        </ul>
+
+        <ul>
+          <h6 class="text-warning">PAYMENT</h6>
+          <li>TemmiePay</li>
+          <li>Wallet</li>
+          <li>Verve</li>
+          <li>MasterCard</li>
+        </ul>
+
+        <ul>
+          <h6 class="text-warning">BUYING ON TPHONE</h6>
+          <li>Buyer Safety Center</li>
+          <li>FAQs</li>
+          <li>Tphone Return Policy</li>
+        </ul>
+
+        <ul>
+          <h6 class="text-warning">MORE INFO</h6>
+          <li>Track My Order</li>
+          <li>Privacy Policy</li>
+          <li>Site Map</li>
+        </ul>
+
+        <ul>
+          <h6 class="text-warning">DOWNLOAD AND CONNECT WITH US</h6>
+          <div class="d-flex justify-content-between d-block">
+            <img src="./PHONE/download on appStore image.JPG" alt="">
+            <img src="./PHONE/download on appStore 2.JPG" alt="">
+          </div>
+        </ul>
+      </nav>
+    </section>
+  </footer>
+
+
+  <!--SMALL PHONE FOOTER -->
+  <div>
+    <div class="fixed-bottom text-center border border-3 d-md-none bg-dark">
+      <ul class="nav justify-content-between">
+        <li class="nav-item">
+          <a class="nav-link active fw-bold" aria-current="page" href="#" style="color: #f68b1f;"><i
+              class="bi bi-house-door"></i><br>Name</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link active fw-bold" style="color: #f68b1f;" aria-current="page" href="#"><i
+              class="bi bi-tag"></i><br>Deals</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link active fw-bold" style="color: #f68b1f;" aria-current="page" href="#"><i
+              class="bi bi-cart3"></i><br>Cart</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link active fw-bold" data-bs-toggle="offcanvas" style="color: #f68b1f;" aria-current="page"
+            href="#"><i class="bi bi-justify-right"></i><br>More</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- SERVICES HOLDER -->
+  <section class="container-fluid ">
+    <nav class="p-3">
+
+    </nav>
+  </section>
+
+
+  <script>
+
+
+    let localData = JSON.parse(localStorage.getItem("clickedData"))
+    console.log(localData);
+    let img = document.getElementById("img");
+    img.src = localData.img
+
+    clickeddes.innerHTML = `<h2 class="text-black">${localData.descr}</h2>`
+    clickedpri.innerHTML = `<h3 class="text-black">${localData.price}</h3>`
+    clickedProductCode.innerHTML = `<h6>Product Code:  ${localData.ProductCode}</h6>`
+
+    clickedBrand.innerHTML = `Brand: ${localData.Brand}`
+
+      
+    if (localStorage.itemsAdded) {
+        let oldData = JSON.parse(localStorage.getItem("itemsAdded"))
+        oldData = addItemsArray}
+
+    let addItemsArray = []
+    const addToCart = () => {
+      document.getElementById('cartAdd').innerHTML = addItemsArray.length + 1
+      // addItemsArray.length = ""
+      console.log(addItemsArray);
+      let once =   addItemsArray.push(localData)
+      localStorage.setItem("itemsAdded", JSON.stringify(addItemsArray))
+      if(addItemsArray.length > 1 ){
+        document.getElementById('cartAdd').innerHTML = addItemsArray.length -1
+        
+        alert("Increase Number of Product in Check Out ")
+         
+      }else{
+
+        Swal.fire({
+          position: 'center',
+          icon: 'success',
+          title: 'items has been added successfully',
+          showConfirmButton: false,
+          timer: 1500
+  
+            })
+      }
+  
+    }
+
+    // const viewItemsAddedd = ()=>{
+    //   window.location.href = "checkOut.html"
+    // }
+
+  // const cartHold = () =>{
+  //   // console.log(cartHold);
+  //   document.getElementById("box").innerHTML = addItemsArray.length == 0 ? "" : addItemsArray.length
+  // }
+  // cartHold()
+  </script>
+  <!-- <script src="firstPage.js"></script> -->
+</body>
+
+</html>
