@@ -26,9 +26,9 @@
     src="https://www-konga-com-res.cloudinary.com/image/upload/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/v1678100539/contentservice/webaccess.gif_ryzHOr71h.gif"
     alt="">
   <div class="text">
-    <span id="cartAdd" class="text-center text-white position-absolute end-0 mx-4 my-3  rounded-circle bg-danger "
+<a href="viewPage.html"><span id="cartAdd" class="text-center text-white position-absolute end-0 mx-4 my-3  rounded-circle bg-danger "
       style="
-        margin-right: 65px; width: 28px; height: 28px;" id="box"></span>
+        margin-right: 65px; width: 28px; height: 28px;" id="box"></span></a>
     <span class="text">This is a clicked items</span>
     <div class="text d-flex w-100 " id="clicked">
 
@@ -42,17 +42,6 @@
         <hr>
         <p class="text" id="clickedpri"></p>
 
-        <!-- <button class=" btn btn-warning"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-            fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
-            <path
-              d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
-          </svg></button><input type="number" placeholder="1" class="" id="showNum"><button class="btn btn-success"><svg
-            xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-minus"
-            viewBox="0 0 16 16">
-            <path d="M5.5 8a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1H6a.5.5 0 0 1-.5-.5z" />
-            <path
-              d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z" />
-          </svg></button> <br> -->
 
 
         <button class="text btn btn-warning px-3 ms-3 text-white fw-bold mt-4 text-center w-75" onclick="addToCart()"
@@ -357,10 +346,11 @@
     </nav>
   </section>
 
-
+  
   <script>
-
-
+    
+    
+    let addItemsArray = []
     let localData = JSON.parse(localStorage.getItem("clickedData"))
     console.log(localData);
     let img = document.getElementById("img");
@@ -375,14 +365,14 @@
       
     if (localStorage.itemsAdded) {
         let oldData = JSON.parse(localStorage.getItem("itemsAdded"))
-        oldData = addItemsArray}
+        addItemsArray = oldData
+      }
 
-    let addItemsArray = []
     const addToCart = () => {
       document.getElementById('cartAdd').innerHTML = addItemsArray.length + 1
       // addItemsArray.length = ""
       console.log(addItemsArray);
-      let once =   addItemsArray.push(localData)
+      addItemsArray.push(localData)
       localStorage.setItem("itemsAdded", JSON.stringify(addItemsArray))
       if(addItemsArray.length > 1 ){
         document.getElementById('cartAdd').innerHTML = addItemsArray.length -1
